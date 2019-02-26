@@ -17,6 +17,9 @@ class EstimateRequest(models.Model):
     read = models.BooleanField(default=False)
     replied = models.BooleanField(default=False)
 
+    def __str__(self):
+        return "{} - {}".format(self.contact_name, self.contact_email)
+
 class Question(models.Model):
     title = models.CharField(max_length=600)
     description = models.TextField()
