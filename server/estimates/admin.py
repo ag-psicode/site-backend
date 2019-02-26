@@ -9,3 +9,4 @@ class EstimateRequestAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(EstimateRequest, EstimateRequestAdmin)
+admin.site.register(Question, QuestionChoice)
