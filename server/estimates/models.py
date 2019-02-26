@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 
 QUESTION_TYPES = (
@@ -8,7 +9,7 @@ QUESTION_TYPES = (
 )
 
 class EstimateRequest(models.Model):
-    uuid = models.UUIDField()
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False)
     contact_name = models.CharField(max_length=200)
     contact_email = models.CharField(max_length=200)
     contact_phone = models.CharField(max_length=20)
