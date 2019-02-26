@@ -20,3 +20,6 @@ class Question(models.Model):
     title = models.CharField(max_length=600)
     description = models.TextField()
     question_type = models.IntegerField(choices=QUESTION_TYPES)
+
+class QuestionChoice(models.Model):
+    name = models.CharField(max_length=300)
