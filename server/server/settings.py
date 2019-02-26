@@ -74,6 +74,8 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 # Authentication
 
+AUTH_USER_MODEL = 'core.User'
+
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
