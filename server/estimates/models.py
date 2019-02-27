@@ -25,5 +25,11 @@ class Question(models.Model):
     description = models.TextField()
     question_type = models.IntegerField(choices=QUESTION_TYPES)
 
+    def __str__(self):
+        return self.title
+
 class QuestionChoice(models.Model):
     name = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name
